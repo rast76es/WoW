@@ -1,0 +1,23 @@
+Step 1:
+ 
+In the box Custom Price Source Name" type exactly this with no quotations, all lower case, "sheymin" and hit enter.
+Then in the box "Custom Price for this Source" type in exactly this"
+ 
+ 
+max(first (105% Max(Crafting, AvgBuy)/0.95, 70% first(min(DBMarket, 150% DBRegionMarketAvg), DBRegionHistorical, DBGlobalMarketAvg, DBGlobalHistorical)), 110% VendorSell/0.95)
+ 
+Step 2:
+ 
+In the box Custom Price Source Name" type exactly this with no quotations, all lower case, "sheynorm" and hit enter.
+Then in the box "Custom Price for this Source" type in exactly this"
+ 
+ 
+max(200% Max(Crafting, AvgBuy)/0.95, 150% first(min(DBMarket, 150% DBRegionMarketAvg), DBRegionHistorical, DBGlobalMarketAvg, DBGlobalHistorical), 110% VendorSell/0.95)
+ 
+ 
+Step 3:
+ 
+In the box Custom Price Source Name" type exactly this with no quotations, all lower case, "sheymax" and hit enter.
+Then in the box "Custom Price for this Source" type in exactly this"
+ 
+max(500% Max(Crafting, AvgBuy)/0.95, 500% first(min(DBMarket, 150% DBRegionMarketAvg), DBRegionHistorical, DBGlobalMarketAvg, DBGlobalHistorical), 110% VendorSell/0.95)
