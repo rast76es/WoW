@@ -1,0 +1,34 @@
+-- $EVENTS ACTIVE_TALENT_GROUP_CHANGED PLAYER_TALENT_UPDATE
+-- $DESC Equips the outfit when you activate specs for the selected talent tree
+
+-- $SETTING Tree1={type="boolean", label=Outfitter:GetTalentTreeName(1), default=false}
+-- $SETTING Tree2={type="boolean", label=Outfitter:GetTalentTreeName(2), default=false}
+-- $SETTING Tree3={type="boolean", label=Outfitter:GetTalentTreeName(3), default=false}
+-- $SETTING Tree4={type="boolean", label=Outfitter:GetTalentTreeName(4), default=false}
+if setting.Tree1 and GetSpecialization() == 1
+or setting.Tree2 and GetSpecialization() == 2
+or setting.Tree3 and GetSpecialization() == 3
+or setting.Tree4 and GetSpecialization() == 4 then
+    if isEquipped then
+        return
+    end
+    equip = true
+    delay = 0.5
+else
+    equip= false
+    delay = 0.5
+end
+
+-- $EVENTS CITY NOT_CITY
+-- $DESC Equips the outfit when you're in a friendly major city
+
+-- If the activation event fires, equip the outfit
+
+if event == "CITY" then
+    equip = true
+
+-- Otherwise it must be the deactivation event so unequip it
+
+else
+    equip = false
+end
